@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <script>
-        alert('Before Function')
+        alert('Before Function');
        function samplefunction()
        {
-        alert('Welcome To TheAlgoGeeks Community')
-        console.log('Welcome To TheAlgoGeeks Community')
+       /*  alert('Welcome To TheAlgoGeeks Community')
+        console.log('Welcome To TheAlgoGeeks Community') */
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        alert('username is '+username);
+        alert('password is '+password);
        }
-       alert('After Function')
+       alert('After Function');
 
     </script>
 </head>
 <body>
     <h1>Login here</h1>
-    Enter UserName : <input type="text" name="" id=""> <br> 
-    Enter Password : <input type="text" name="" id=""> <br>
+    Enter UserName : <input type="text" name="" id="username"> <br> 
+    Enter Password : <input type="password" name="" id="password"> <br>
     <button onclick="samplefunction()">Login</button>
 </body>
 </html>
