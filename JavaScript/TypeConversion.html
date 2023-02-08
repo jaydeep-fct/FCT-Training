@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion in JavaScript</title>
+</head>
+<body>
+    <p>Before Script</p>
+    <script>
+        let value = true;
+        alert(typeof value); //boolean
+
+        value = String(value); //now value is a string "true"
+        alert(typeof value); //string
+
+        let str = "123"
+        alert(typeof str); // string
+
+        let num = Number(str); //becomes a number 123
+        alert(typeof num); //number
+
+        let age = Number("an arbitary string instead of a number ")
+        alert(age); //Nan, conversion Failed
+    </script>
+    <p>After Script</p>
+</body>
+</html>
