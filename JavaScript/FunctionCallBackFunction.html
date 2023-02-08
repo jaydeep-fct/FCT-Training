@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CallBack Function in JavaScript</title>
+  </head>
+  <body>
+    <p>Before Script</p>
+    <script>
+        function ask(question, ok, cancel){
+          if (confirm(question)) // ok and cancel button
+          ok(); //this is a call back the agree/sure/confirm
+          else
+          cancel(); //this is a call back disagree/notsure/notconfirm
+          }
+          ask("Do you agree?",
+              function agree() {
+                  alert("You agreed." );
+                  //ask("are you sure", function hi() { }, function hello() { });
+          },
+          function disagree() 
+          {
+            alert("You canceled the execution.");
+          }
+          );
+          ask("Are you Sure?",
+          function sure()
+          {
+            alert("You are sure." );
+          },
+          function notsure()
+          {
+            alert("You were not sure about the execution." );}
+          );
+          ask("Confirm to delete?",
+          function confirmed () 
+          { 
+            alert("You are confirmed about the deletion" );
+          },
+          function notconfirmed()
+          {
+            (alert("You are not confirmed about deletion."));
+          }
+          );
+    </script>
+    <p>After Script</p>
+  </body>
+</html>
