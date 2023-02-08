@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script>
+        function valFunction()
+        {
+            var fname = document.getElementById("fname").value
+            var lname = document.getElementById("lname").value
+            var email = document.getElementById("email").value
+            var password = document.getElementById("password").value
+            var cpassword = document.getElementById("cpassword").value
+            var mobile = document.getElementById("mobile").value
+
+            if(fname=="")
+            {
+                alert("first name should not be blank")
+                return false;
+            }
+            if(lname=="")
+            {
+                alert("last name should not be blank")
+                return false;
+            }
+            if(email=="")
+            {
+                alert("email should not be blank")
+                return false;
+            }
+            if(password=="")
+            {
+                alert("password should not be blank")
+                return false;
+            }
+            if(cpassword=="")
+            {
+                alert("confirn password should not be blank")
+                return false;
+            }
+            if(password !== cpassword)
+            {
+                alert("password & confirn password is not same")
+                return false;
+            }
+            if(mobile=="")
+            {
+                alert("contact number should not be blank")
+                return false;
+            }
+
+            console.log("first name is :"+fname);
+            console.log("last name is :"+lname);
+            console.log("email is :"+email);
+            console.log("password is :"+password);
+            console.log("contact number is :"+mobile);
+            return true;
+        }
+
+    </script>
+    <style>
+        table{
+            background-color: black;
+            color: aqua;
+        }
+        h1{
+            color: aqua;
+        }
+        body{
+            background-color:black;
+        }
+        #btn{
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Register Here</h1>
+    <form action="Dashboard.html">
+        <table align="center" border="2">
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" id="fname"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="lname"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" id="cpassword"></td>
+            </tr>
+            <tr>
+                <td>Contact No.</td>
+                <td><input type="number" id="mobile"></td>
+            </tr>
+    
+        </table>
+        <div align="center">
+            <input type="submit" value="Register" id="btn" onclick="return valFunction()">
+        </div>
+    </form>
+</body>
+</html>

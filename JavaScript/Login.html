@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
     <script>
-        alert('Before Function');
-       function samplefunction()
-       {
-       /*  alert('Welcome To TheAlgoGeeks Community')
+    //   alert("Before Function");
+      function samplefunction() {
+        /*  alert('Welcome To TheAlgoGeeks Community')
         console.log('Welcome To TheAlgoGeeks Community') */
-        var username = document.getElementById("username").value;
+        /* var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         alert('username is '+username);
-        alert('password is '+password);
-       }
-       alert('After Function');
+        alert('password is '+password); */
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        /* console.log('username is '+username);
+        console.log('password is '+password); */
 
+        if (username == "") {
+          alert("username should not be blank");
+          return false;
+        }
+        if (password == "") {
+          alert("password should not be blank");
+          return false;
+        }
+        console.log("username is " + username);
+        console.log("password is " + password);
+        return true;
+      }
+      //    alert('After Function');
     </script>
-</head>
-<body>
-    <h1>Login here</h1>
-    Enter UserName : <input type="text" name="" id="username"> <br> 
-    Enter Password : <input type="password" name="" id="password"> <br>
-    <button onclick="samplefunction()">Login</button>
-</body>
+    <style>
+      body{
+        background-color: black;
+      }
+      table
+      {
+        color: aqua;
+      }
+      h1
+      {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align="center">Login here</h1>
+    <table align="center" border="2">
+      <form action="Dashboard.html">
+        <tr>
+          <td>Enter UserName</td>
+          <td><input type="text" name="" id="username" /></td>
+        </tr>
+        <tr>
+          <td>Enter Password</td>
+          <td><input type="password" name="" id="password" /></td>
+        </tr> 
+        <!-- <button onclick="samplefunction()">Login</button> -->
+    </table> <br>
+    <div align="center">
+      <input type="submit" value="Login" onclick=" return samplefunction()" />
+    </div>
+  </form>
+  </body>
 </html>
