@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with Parameters in JavaScript</title>
+</head>
+<body>
+    <p>Before Script</p>
+    <script>
+        function showMsg(from, text){
+            from ='*' + from + '*';
+            alert(from + ': '+ text);
+        }
+        let from = "Jaydeep"; showMsg(from, "hello"); // *Jaydeep*; Hello
+
+        // the value of "from" is the same, the function modified a local copy
+        alert( from ); //jaydeep
+        function showMsg1(from, text =  "No text given")
+        {
+            alert(from+": " + text);
+        }
+        let text="overridden line SOME TEXT IS GIVEN";
+        showMsg1("Jaydeep",text); //Jaydeep Overridden line some text is given
+        showMsg1("JPG");
+        showMsg1("JP", "This is new line");
+
+        function anotherFunction(){return 'End User';}
+        function showMsg2(from, text= anotherFunction()){
+            alert(from + ": "+ text);
+        }
+        showMsg2("JD"); showMsg2("Jay", "Admin user");
+    </script>
+    <p>After Script</p>
+</body>
+</html>

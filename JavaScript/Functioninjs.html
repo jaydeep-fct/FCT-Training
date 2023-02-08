@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JavaScript</title>
+</head>
+<body>
+    <p>Before Script</p>
+    <script>
+        let userName = 'Jay';
+
+        function showMsg()
+        {
+            let var1 = 100;
+            userName = `'Deep with spaces ${var1}'`; //(1) changed
+            let msg1 = 'Hey' + userName;
+            alert(msg1);
+        }
+
+        alert(userName); //jay before the function call
+        showMsg(); //to invoke it
+        alert(userName); //Deep, the value was modified by the 
+    </script>
+    <p>After Script</p>
+</body>
+</html>

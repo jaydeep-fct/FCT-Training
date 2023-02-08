@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function As Expression in JavaScript</title>
+  </head>
+  <body>
+    <p>Before Script</p>
+    <script>
+      function sayHi() {
+        fconsole.log("Hello1");
+        alert("Hello2");
+        console.log("Hello3");
+      }
+      alert(sayHi); /* shows the function code*/
+      sayHi(); // would run it
+
+      function greet() {
+        // (1) create
+        console.log("Good Morning1");
+        alert("Good Morning2");
+        console.log("Good Morning3");
+      } // semicolon not required, like, if, switch, for, while need not require ser
+
+      let whatsup1 = greet; /* (2) copy*/
+      let whatsup2 = whatsup1;
+      whatsup1(); // Good morning // (3) run the copy (it works)!
+      greet(); // Good morning // this still works too (why wouldn't it)
+      whatsup2();
+
+      let greetTheWorld = function () {
+        // function expressed
+        console.log("Hows life?bluel");
+        alert("Hows life?blue2");
+        console.log("Hows life?blue3");
+        return 500;
+      }; // semicolon here as a part to terminate this assignment statement
+      alert(greetTheWorld);
+      let greetTheWorldAgain = greetTheWorld;
+      greetTheWorld();
+      greetTheWorldAgain();
+    </script>
+    <p>After Script</p>
+  </body>
+</html>
