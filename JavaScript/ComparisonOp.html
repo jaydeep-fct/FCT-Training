@@ -7,38 +7,38 @@
     <title>Comparisons Operator</title>
   </head>
   <body>
+    <p>Before Script</p>
     <script>
+      alert('2 > 1' + (2 > 1)); // true (correct)
+      alert('2 == 1' + (2 == 1)); // false (wrong)
+      alert('2!=1' + (2 != 1)); // true (correct)
 
-              alert('2> 1'+ (2 > 1) );  // true (correct)
-              alert('2 == 1' + (2 == 1) ); // false (wrong) 
-              alert('2!=1' + (2 != 1) ); // true (correct)
+      alert('Z > A' + ('Z' > 'A')); // true 65A.B66 C67....98Z 97a...122z
+      alert('Glow Glee'('Glow' > 'Glee')); // true
+      alert('Bee > Be'('Bee' > 'Be')); // true
 
-              97a...122z
+      alert('2' > 1); // true, string '2' becomes a number 2
+      alert('01' == 1); // true, string '01' becomes a number 1
 
-              alert('Z > A' + ('Z' > 'A') ); // true 65A.B66 C67....98Z alert('Glow Glee' ('Glow' > 'Glee') ); // true alert('Bee > Be' ('Bee' > 'Be') ); // true
+      let a = 0;
+      alert(Boolean(a)); // false
+      let b = "0";
+      alert(Boolean(b)); // true alert(a==b); // true! - funny one
 
-              alert('2'> 1 ); // true, string '2' becomes a number 2 alert('01' == 1); // true, string '01' becomes a number 1
+      //A strict equality operator === checks the equality without type conversion.
+      alert(0 === false); // false, because the types are different
 
-              let a = 0; alert( Boolean(a)); // false
-
-              let b = "0"; alert( Boolean (b)); // true alert(a==b); // true! - funny one
-
-              //A strict equality operator === checks the equality without type conversion. alert( 0 === false); // false, because the types are different
-
-              number Boolean
-
-              //The reason is that an "equality check" == and //range comparisons > < >=<= work differently.
-              //during "range Comparisons" it convert null to a number, //treating it as 0.
+      // number Boolean
+      //The reason is that an "equality check" == and //range comparisons > < >=<= work differently.
+      //during "range Comparisons" it convert null to a number, //treating it as 0.
 
       //Thats why (3) null >= 0 is true and (1) null > ◊ is false.
 
-      alert( null > 0); // (1) false
-
-      alert(null == 0 ); // (2) false
-
-      alert(null >= 0 ); // (3) true
+      alert(null > 0); // (1) false
+      alert(null == 0); // (2) false
+      alert(null >= 0); // (3) true
     </script>
 
-    <p>...After the script.</p>
+    <p>After Script</p>
   </body>
 </html>
