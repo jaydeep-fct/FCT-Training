@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut in JavScript</title>
+</head>
+<body>
+    <script>
+        
+        function msg()
+    {
+        window.setTimeout(
+            function()
+                {
+                    
+                    alert("Welcome to TheAlgoGeeks Community.");
+                },
+                5000
+        );
+    }
+    document.write("Site will Load after 5 Sec"); 
+    </script>
+    
+    <br><input type="button" value="Click it" onclick="msg()">
+</body>
+</html>

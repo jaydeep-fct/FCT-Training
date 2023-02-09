@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="worldPara" onmouseover="mouseEntered(this)" onmouseout="mouseExited(this)" onclick="changeColor()">
+      I am not arrogant I just Belive am the best in The World
+    </p>
+    <script>
+
+        function mouseEntered(obj)
+        {
+            obj.innerHTML="I am The Best"
+            document.getElementById("worldPara").innerHTML=" blue"
+            document.getElementById("worldPara").style.color="Red"
+        }
+
+        function mouseExited(obj)
+        {
+            obj.innerHTML="Best in the world"
+            document.getElementById("worldPara").innerHTML=" yellow"
+            document.getElementById("worldPara").style.color=" voilet"
+        }
+
+        function changeColor()
+        {
+            document.getElementById("worldPara").innerHTML="Belive"
+            document.getElementById("worldPara").style.color=" Green"
+        }
+    </script>
+  </body>
+</html>

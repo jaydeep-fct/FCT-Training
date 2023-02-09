@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>By Tag in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      function countpara() {
+        var totalpara = document.getElementsByTagName("p");
+        alert("Total p tags are:" + totalpara.length);
+      }
+    </script>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
+      possimus officia aliquid temporibus dolorum accusantium sit explicabo,
+      labore nesciunt ab mollitia perferendis minus quam, architecto impedit,
+      corrupti est numquam!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
+      possimus officia aliquid temporibus dolorum accusantium sit explicabo,
+      labore nesciunt ab mollitia perferendis minus quam, architecto impedit,
+      corrupti est numquam!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
+      possimus officia aliquid temporibus dolorum accusantium sit explicabo,
+      labore nesciunt ab mollitia perferendis minus quam, architecto impedit,
+      corrupti est numquam!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem
+      possimus officia aliquid temporibus dolorum accusantium sit explicabo,
+      labore nesciunt ab mollitia perferendis minus quam, architecto impedit,
+      corrupti est numquam!
+    </p>
+    <button onclick="countpara()">Count Paragraph</button>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Date in JavaScript</title>
+</head>
+<body>
+    <script>
+        function validateDOB()
+        {
+            var today = new Date();
+            var dob = document.getElementById("mydate").value
+            
+            var dob1 = dob.split("-");//return an array of date 2019,12,25
+
+            document.writeln('DOB entered by you:'+dob+'<br>')
+            document.writeln('Today is'+today+'<br>')
+
+            var currentYear = today.getFullYear();
+            if(dob1[0] <= currentYear-18) alert('You r 18 years old !');
+            else alert('You r not 18 years old')
+        }
+
+
+
+        /* document.writeln('Today is'+today+'<br>')
+        document.writeln('Day is'+today.getDay()+'<br>')
+        document.writeln('Date is'+today.getDate()+'<br>')
+        document.writeln('Year is'+today.getFullYear()+'<br>')
+        document.writeln('Month is'+today.getMonth()+'<br>')
+
+        document.writeln('Hour is'+today.getHours()+'<br>')
+        document.writeln('Minute is'+today.getMinutes()+'<br>')
+        document.writeln('Second is'+today.getSeconds()+'<br>')
+        document.writeln('Milliseconds is'+today.getMilliseconds()+'<br>') */
+    </script>
+    <!-- Enter Date: <input type="date" id="mydata" min="2005-01-01" max="2033-01-01"> <br> -->
+
+    Enter BirthDate: <input type="date" id="mydate" onchange="validateDOB()"> <br>
+</body>
+</html>
