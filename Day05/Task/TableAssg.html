@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arrays in JavaScript</title>
+    <h1 align="center">Doing Funny Things</h1>
+  </head>
+  <script>
+    stud = { studRollNo: 18, studName: "Jaydeep", studFees: 100000 };
+    document.write(stud.studRollNo + " ");
+    document.write(stud.studName + " ");
+    document.write(stud.studFees);
+
+    function showEmp() {
+      document.getElementById("studrno").innerHTML = stud.studRollNo;
+      document.getElementById("studname").innerHTML = stud.studName;
+      document.getElementById("studfees").innerHTML = stud.studFees;
+    }
+    mydept = [
+      {
+        deptNumber: 10,
+        deptName: "Accounts",
+        deptLocation: "New York",
+
+        student: [
+          {
+            studRollNo: 101,
+            studName: "Bruce",
+            studFees: 5000,
+            empImg: "Fun.JPG",
+          },
+          {
+            studRollNo: 102,
+            studName: "Reena",
+            studFees: 6000,
+            empImg: "Cute.jpg",
+          },
+          {
+            studRollNo: 103,
+            studName: "Meena",
+            studFees: 7000,
+            empImg: "meena.png",
+          },
+        ],
+      },
+
+      {
+        deptNumber: 20,
+        deptName: "IT",
+        deptLocation: "New Jersey",
+        student: [
+          {
+            studRollNo: 104,
+            studName: "angry",
+            studFees: 2000,
+            empImg: "angry.jpg",
+          },
+          {
+            studRollNo: 105,
+            studName: "Jill",
+            studFees: 3000,
+            empImg: "jimmy.png",
+          },
+          {
+            studRollNo: 106,
+            studName: "Maddy",
+            studFees: 4000,
+            empImg: "maddy.jpg",
+          },
+          {
+            studRollNo: 115,
+            studName: "Smith",
+            studFees: 4400,
+            empImg: "jimmy.png",
+          },
+        ],
+      },
+
+      {
+        deptNumber: 30,
+        deptName: "Sales",
+        deptLocation: "Chicago",
+
+        student: [
+          {
+            studRollNo: 107,
+            studName: "Reeta",
+            studFees: 5000,
+            empImg: "angry.jpg",
+            addresses: [
+              {
+                street: "Kulas Light",
+                suite: "Apt. 556",
+                city: "Gwenborough",
+                zipcode: "92998-3874",
+              },
+              {
+                street: "Kulas Ray",
+                suite: "Apt. 456",
+                city: "Gwenborough",
+                zipcode: "92998-3884",
+              },
+            ],
+          },
+          {
+            studRollNo: 108,
+            studName: "Seeta",
+            studFees: 6000,
+            empImg: "cute.jpg",
+          },
+          {
+            studRollNo: 109,
+            studName: "Geeta",
+            studFees: 7000,
+            empImg: "angry.jpg",
+          },
+        ],
+      },
+
+      {
+        deptNumber: 40,
+        deptName: "Operations",
+        deptLocation: "Dallas",
+        student: [
+          {
+            studRollNo: 110,
+            studName: "Julie",
+            studFees: 8000,
+            empImg: "meena.png",
+          },
+          {
+            studRollNo: 111,
+            studName: "Julia",
+            studFees: 9000,
+            empImg: "fun.jpg",
+          },
+          {
+            studRollNo: 112,
+            studName: "Silvie",
+            studFees: 9500,
+            empImg: "meena.png",
+          },
+          {
+            studRollNo: 116,
+            studName: "King",
+            studFees: 8500,
+            empImg: "jimmy.png",
+          },
+          {
+            studRollNo: 117,
+            studName: "Martin",
+            studFees: 7500,
+            empImg: "fun.jpg",
+          },
+        ],
+      },
+    ];
+
+    document.write(
+      "<table /* border=5 cellspacing=10 cellpadding=10 */> " +
+        "<thead>	<th>Dept No.</th>	<th>Department Name</th>" +
+        "<th>Dept Location</th>" +
+        "</thead>"
+    );
+    for (i = 0; i < mydept.length; i++) {
+      document.write("<tr>");
+      document.write("<td>" + mydept[i].deptNumber + "</td>");
+      document.write("<td>" + mydept[i].deptName + "</td>");
+      document.write("<td>" + mydept[i].deptLocation + "</td>");
+      document.write("<td>");
+      document.write(
+        "<table /* border=5 cellspacing=10 cellpadding=10 */> " +
+          "<thead>	<th>Student RollNo</th>	<th>Student Name</th>" +
+          "<th>Student Fees</th>" +
+          "</thead>"
+      );
+      for (j = 0; j < mydept[i].student.length; j++) {
+        document.write("<tr>");
+        document.write("<td>" + mydept[i].student[j].studRollNo + "</td>");
+        document.write("<td>" + mydept[i].student[j].studName + "</td>");
+        document.write("<td>" + mydept[i].student[j].studFees + "</td>");
+        document.write(
+          "<td> <img src=" +
+            mydept[i].student[j].empImg +
+            " height=200 width=300></td>"
+        );
+        document.write("</tr>");
+      }
+      document.write("</table>");
+      document.write("</td>");
+      document.write("</tr>");
+    }
+
+    document.write("</table>");
+  </script>
+
+  <body style="background-color: black; color:aqua ;"  >
+    <br />
+    
+    <br>
+    Student Roll Number is: <span id="studrno"></span> <br />
+    Student Name is: <span id="studname"></span> <br />
+    Student Fees is: <span id="studfees"></span> <br />
+    <button onclick="showEmp()">Show Student</button>
+  </body>
+</html>
